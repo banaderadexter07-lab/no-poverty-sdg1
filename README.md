@@ -1,2 +1,355 @@
 # no-poverty-sdg1
 index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about the United Nations Sustainable Development Goal 1 (No Poverty) in the Philippines — its goals, challenges, key programs, and how you can help end poverty.">
+  <title>NO POVERTY - UN SDG 1 in the Philippines</title>
+  <link rel="icon" href="https://img.icons8.com/color/48/000000/no-poverty.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-sdg1-red: #E5243B;
+      --color-primary-dark: #A80017;
+      --color-orange-accent: #FF9F1C;
+      --color-dark: #333;
+      --color-light: #f9f9fb;
+      --font-primary: 'Poppins', sans-serif;
+      --font-secondary: 'Roboto', sans-serif;
+    }
+
+    body {
+      font-family: var(--font-secondary);
+      margin: 0;
+      background-color: var(--color-light);
+      color: var(--color-dark);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    /* HEADER SECTION */
+    header {
+      text-align: center;
+      background: linear-gradient(rgba(229, 36, 59, 0.7), rgba(229, 36, 59, 0.7)),
+        url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1650&q=80') no-repeat center/cover;
+      color: #fff;
+      padding: 140px 20px 160px;
+      position: relative;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      overflow: hidden;
+    }
+
+    header h1 {
+      font-family: var(--font-primary);
+      font-size: 4em;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin: 0;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+      animation: fadeInDown 1s ease-out;
+    }
+
+    header p {
+      font-size: 1.4em;
+      font-weight: 400;
+      margin-top: 10px;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* NAVIGATION */
+    nav {
+      background: var(--color-dark);
+      padding: 12px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 14px;
+      font-family: var(--font-primary);
+      font-weight: 600;
+      font-size: 1em;
+      padding: 10px 15px;
+      border-radius: 5px;
+      border-bottom: 3px solid transparent;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover, nav a.active {
+      background-color: rgba(255,255,255,0.1);
+      border-bottom: 3px solid var(--color-orange-accent);
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+
+    section {
+      margin-bottom: 80px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.7s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ICONS ABOVE SECTION TITLES */
+    .icon {
+      display: block;
+      margin: 0 auto 15px;
+      width: 80px;
+      transition: transform 0.3s ease;
+    }
+
+    .icon:hover {
+      transform: scale(1.08);
+    }
+
+    h2 {
+      color: var(--color-sdg1-red);
+      font-family: var(--font-primary);
+      text-align: center;
+      font-size: 2.3em;
+      position: relative;
+      margin-bottom: 25px;
+    }
+
+    h2::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: var(--color-orange-accent);
+      margin: 10px auto;
+      border-radius: 2px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      border-left: 5px solid var(--color-sdg1-red);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      position: relative;
+      padding-left: 28px;
+      margin-bottom: 12px;
+    }
+
+    ul li::before {
+      content: '✔';
+      color: var(--color-sdg1-red);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+
+    .highlight-stat {
+      font-size: 1.8em;
+      font-weight: 700;
+      color: var(--color-orange-accent);
+      text-align: center;
+      display: block;
+      margin: 20px 0;
+    }
+
+    footer {
+      text-align: center;
+      background: var(--color-dark);
+      color: white;
+      padding: 30px 15px;
+      font-size: 0.95em;
+      box-shadow: 0 -4px 10px rgba(0,0,0,0.2);
+    }
+
+    #topBtn {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: var(--color-sdg1-red);
+      color: white;
+      border: none;
+      padding: 16px;
+      border-radius: 50%;
+      font-size: 22px;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+      transition: background-color 0.3s, transform 0.2s;
+      z-index: 1001;
+    }
+
+    #topBtn:hover {
+      background-color: var(--color-primary-dark);
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.8em; }
+      header p { font-size: 1.1em; }
+      .card { padding: 20px; }
+      .highlight-stat { font-size: 1.5em; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>NO POVERTY</h1>
+    <p>United Nations Sustainable Development Goal 1 (Philippines)</p>
+  </header>
+
+  <nav>
+    <a href="#intro">Intro</a>
+    <a href="#goal">Goal</a>
+    <a href="#philippines">PH Context</a>
+    <a href="#programs">Programs</a>
+    <a href="#solutions">Solutions</a>
+    <a href="#action">Take Action</a>
+  </nav>
+
+  <main>
+    <section id="intro">
+      <img src="https://img.icons8.com/color/96/000000/human-rights.png" alt="Human Rights Icon" class="icon">
+      <div class="card">
+        <h2>Introduction: The Human Right</h2>
+        <p>The <strong>United Nations established 17 Sustainable Development Goals (SDGs)</strong> in 2015 to end poverty, protect the planet, and ensure prosperity by 2030. 
+        <strong>SDG 1: No Poverty</strong> addresses not just income, but access to education, healthcare, and opportunity — the foundation for sustainable growth.</p>
+      </div>
+    </section>
+
+    <section id="goal">
+      <img src="https://img.icons8.com/color/96/000000/goal--v1.png" alt="Goal Icon" class="icon">
+      <div class="card">
+        <h2>The Goal & Targets</h2>
+        <p>SDG 1 seeks to <strong>eradicate extreme poverty everywhere by 2030</strong>. Globally, this means helping those living on less than <strong>$2.15 a day</strong>. In the Philippines, poverty is measured by family income needed for basic needs.</p>
+        <span class="highlight-stat">₱13,797 per month (2023)</span>
+        <p style="text-align:center;">(Source: Philippine Statistics Authority)</p>
+      </div>
+    </section>
+
+    <section id="philippines">
+      <img src="https://img.icons8.com/color/96/000000/philippines.png" alt="Philippine Map Icon" class="icon">
+      <div class="card">
+        <h2>Philippine Context & Challenges</h2>
+        <ul>
+          <li><strong>Poverty Incidence:</strong> 22.4% (2023), affecting 25.24 million Filipinos.</li>
+          <li><strong>Most Affected:</strong> Farmers, fisherfolk, and residents of BARMM.</li>
+          <li><strong>Key Barriers:</strong> Limited access to education, healthcare, and jobs; vulnerability to natural disasters.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="programs">
+      <img src="https://img.icons8.com/color/96/000000/development-skill.png" alt="Programs Icon" class="icon">
+      <div class="card">
+        <h2>Key Government Programs</h2>
+        <ul>
+          <li><strong>4Ps:</strong> Conditional cash grants improving health, nutrition, and education.</li>
+          <li><strong>TESDA:</strong> Free technical and vocational training for employability.</li>
+          <li><strong>UHC Act:</strong> Affordable, quality healthcare for all Filipinos.</li>
+          <li><strong>SLP:</strong> Micro-enterprise and job facilitation for marginalized groups.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="solutions">
+      <img src="https://img.icons8.com/color/96/000000/idea.png" alt="Solutions Icon" class="icon">
+      <div class="card">
+        <h2>Sustainable Solutions</h2>
+        <ul>
+          <li><strong>Boost Local Economies:</strong> Invest in rural areas and job hubs.</li>
+          <li><strong>Financial Inclusion:</strong> Widen access to banking, credit, and insurance.</li>
+          <li><strong>Climate Resilience:</strong> Strengthen protection against natural disasters.</li>
+          <li><strong>Education Access:</strong> Improve quality education for long-term stability.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="action">
+      <img src="https://img.icons8.com/color/96/000000/volunteering.png" alt="Take Action Icon" class="icon">
+      <div class="card">
+        <h2>How You Can Take Action</h2>
+        <ul>
+          <li><strong>Support Fair Trade:</strong> Buy local, ethical products.</li>
+          <li><strong>Volunteer:</strong> Join educational or livelihood programs.</li>
+          <li><strong>Advocate:</strong> Promote equality and anti-corruption policies.</li>
+          <li><strong>Vote Wisely:</strong> Support leaders prioritizing poverty reduction.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>SDG 1 - NO POVERTY (Philippines)</strong> | Sources: UN, PSA, DSWD, World Bank</p>
+    <p>© 2025 Created for educational awareness and advocacy.</p>
+  </footer>
+
+  <button id="topBtn" title="Back to top">↑</button>
+
+  <script>
+    const topBtn = document.getElementById("topBtn");
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("nav a");
+
+    window.addEventListener("scroll", () => {
+      topBtn.style.display = window.scrollY > 300 ? "block" : "none";
+      let current = "";
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (scrollY >= sectionTop - 200) current = section.id;
+      });
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href").includes(current)) link.classList.add("active");
+      });
+    });
+
+    topBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
