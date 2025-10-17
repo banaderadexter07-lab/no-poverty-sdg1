@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Good Health and Well-Being - SDG 3 Philippines</title>
+  <style>
+    /* --- Global Styles --- */
+    body {
+      font-family: 'Poppins', 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #2D6A4F 40%, #40916C 100%);
+      color: #222;
+    }
+
+    header {
+      text-align: center;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/7/79/Sustainable_Development_Goal_3.png') no-repeat center;
+      background-size: cover;
+      color: white;
+      padding: 100px 20px;
+      position: relative;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(45, 106, 79, 0.85);
+    }
+
+    header h1, header p {
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      font-weight: 300;
+    }
+
+    /* --- Navigation Bar --- */
+    nav {
+      background-color: #1B4332;
+      padding: 14px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 18px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #B7E4C7;
+    }
+
+    /* --- Sections --- */
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #1B4332;
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 1.8em;
+      font-weight: 600;
+    }
+
+    .card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+      margin-bottom: 35px;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+    }
+
+    ul {
+      margin-left: 25px;
+      line-height: 1.8;
+    }
+
+    /* --- Footer --- */
+    footer {
+      text-align: center;
+      background-color: #1B4332;
+      color: #D8F3DC;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 0.95em;
+      letter-spacing: 0.5px;
+    }
+
+    /* --- Back to Top Button --- */
+    #topBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #2D6A4F;
+      color: white;
+      border: none;
+      padding: 14px 18px;
+      border-radius: 50%;
+      font-size: 18px;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+      transition: background-color 0.3s;
+    }
+
+    #topBtn:hover {
+      background-color: #40916C;
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2em;
+      }
+      nav a {
+        margin: 0 10px;
+      }
+      section {
+        padding: 40px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header id="home">
+    <h1>GOOD HEALTH AND WELL-BEING</h1>
+    <p>United Nations Sustainable Development Goal 3 (Philippines)</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#intro">Intro</a>
+    <a href="#goal">Goal</a>
+    <a href="#issues">Issues</a>
+    <a href="#philippines">PH Context</a>
+    <a href="#programs">Programs</a>
+    <a href="#action">Action</a>
+  </nav>
+
+  <section id="intro">
+    <div class="card">
+      <h2>Introduction</h2>
+      <p>
+        SDG 3 aims to ensure healthy lives and promote well-being for all at all ages. 
+        Health is essential to human progress and sustainable development. 
+        Ensuring access to quality healthcare, vaccines, and nutrition contributes to a healthier and more resilient society.
+      </p>
+    </div>
+  </section>
+
+  <section id="goal">
+    <div class="card">
+      <h2>Goal</h2>
+      <p>
+        The goal of SDG 3 is to reduce maternal and child mortality, fight communicable diseases, 
+        promote mental health, and achieve universal health coverage. 
+        It also emphasizes access to essential medicines, vaccines, and clean environments.
+      </p>
+    </div>
+  </section>
+
+  <section id="issues">
+    <div class="card">
+      <h2>Key Health Challenges</h2>
+      <ul>
+        <li>Limited access to healthcare in rural and remote areas.</li>
+        <li>Rising cases of lifestyle-related diseases like diabetes and hypertension.</li>
+        <li>High rates of maternal and infant mortality in low-income communities.</li>
+        <li>Mental health stigma and lack of support systems.</li>
+        <li>Insufficient vaccination coverage and health education.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="philippines">
+    <div class="card">
+      <h2>Philippine Situation</h2>
+      <p>
+        The Philippines has made progress in improving public health through expanded healthcare programs 
+        and vaccination drives. However, challenges remain — including unequal access to medical facilities, 
+        malnutrition among children, and increasing mental health concerns. 
+        The pandemic also highlighted the need for stronger health systems and better health education.
+      </p>
+    </div>
+  </section>
+
+  <section id="programs">
+    <div class="card">
+      <h2>Government Programs</h2>
+      <ul>
+        <li><b>Universal Health Care (UHC) Act:</b> Ensures that every Filipino has access to affordable and quality healthcare services.</li>
+        <li><b>DOH Health Promotion Framework Strategy:</b> Focuses on preventive healthcare and healthy lifestyles.</li>
+        <li><b>National Immunization Program (NIP):</b> Provides free vaccines to children and vulnerable groups.</li>
+        <li><b>National Mental Health Program:</b> Promotes mental health awareness and services nationwide.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="action">
+    <div class="card">
+      <h2>Take Action</h2>
+      <p>
+        You can contribute to SDG 3 by maintaining a healthy lifestyle, getting vaccinated, 
+        supporting health campaigns, and promoting mental health awareness. 
+        Small actions like exercise, proper hygiene, and empathy can build a healthier, happier nation.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 SDG 3: Good Health and Well-Being | Philippines 💚 <br>
+    Created by: <b>Ronan Urbino</b>
+  </footer>
+
+  <button id="topBtn" onclick="topFunction()">↑</button>
+
+  <script>
+    const topBtn = document.getElementById("topBtn");
+    window.onscroll = function() { scrollFunction(); };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        topBtn.style.display = "block";
+      } else {
+        topBtn.style.display = "none";
+      }
+    }
+
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+</body>
+</html>
